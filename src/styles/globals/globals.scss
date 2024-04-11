@@ -2,3 +2,44 @@
 @import "colors";
 @import "functions";
 @import "mixins";
+@import "fontFamily";
+
+.wrapper {
+	max-width: rem(1250);
+	margin: auto;
+	padding: 1rem;
+
+	@include tablet() {
+		& {
+			padding: 1.5rem;
+		}
+	}
+	@include desktop() {
+		& {
+			padding: 1.5rem;
+		}
+	}
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+.button {
+	background-color: $color-gold;
+	border-color: $color-gold;
+	border-radius: 0;
+	color: #fff;
+	padding: rem(6) rem(12);
+	border: none;
+
+	&:active,
+	&:hover {
+		filter: brightness(90%);
+		background-color: $color-gold;
+		border-color: $color-gold;
+		color: #fff;
+		transition: 0.4s;
+	}
+}

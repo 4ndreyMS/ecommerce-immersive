@@ -1,7 +1,10 @@
-// In this file we call to execute scss components.
+// External imports
 @import "~bootstrap/scss/bootstrap";
 
-h1 {
-	text-align: center;
-	color: blue;
+//Import of internal scss components.
+@import "components/navbar.scss";
+@import "components/hero.scss";
+
+.main-section {
+	margin-top: 4rem;
 }

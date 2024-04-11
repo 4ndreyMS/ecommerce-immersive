@@ -1,11 +1,50 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>My webpack template</title>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>Home</title>
+		<meta name="description" content="" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 	</head>
 	<body>
-		<h1>Hello there!f fddf</h1>
-		<h2>You are using webpack ddddd</h2>
+		<nav class="nav">
+			<div class="nav__container wrapper">
+				<a class="nav__logo-link" href="#">
+					<img
+						class="nav__logo-img"
+						alt="Pet zen logo"
+						src="assets/furniro-logo.png"
+					/>
+				</a>
+
+				<ul class="nav__menu">
+					<li><a href="#">Home</a></li>
+					<li><a href="#about">About</a></li>
+					<li><a href="#products">Products</a></li>
+				</ul>
+
+				<div class="nav__spacer"></div>
+			</div>
+		</nav>
+		<main class="main-section">
+			<hero id="#about" class="hero">
+				<div class="hero__container-bg">
+					<div class="hero__banner-container wrapper">
+						<div class="hero__banner wrapper">
+							<h1 class="hero__banner-header">Discover our collections</h1>
+							<p>
+								Welcome to our online store, showcasing our latest furniture
+								collection. Our hero section presents high-quality images of our
+								new arrivals. Each piece is crafted with care, offering style
+								and comfort for every home. Explore our collection and find the
+								perfect piece to transform your space.
+							</p>
+							<button class="button" type="button">See collections</button>
+						</div>
+					</div>
+				</div>
+			</hero>
+		</main>
 	</body>
-	<footer></footer>
 </html>
