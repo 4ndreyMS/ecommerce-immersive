@@ -10,7 +10,7 @@
 	<body>
 		<nav class="nav">
 			<div class="nav__container wrapper">
-				<a class="nav__logo-link" href="#">
+				<a class="nav__logo-link" href="/">
 					<img
 						class="nav__logo-img"
 						alt="Pet zen logo"
@@ -19,9 +19,9 @@
 				</a>
 
 				<ul class="nav__menu">
-					<li><a href="#">Home</a></li>
+					<li><a href="/">Home</a></li>
 					<li><a href="#about">About</a></li>
-					<li><a href="#products">Products</a></li>
+					<li><a href="/products">Products</a></li>
 				</ul>
 
 				<div class="nav__spacer"></div>
@@ -45,6 +45,27 @@
 					</div>
 				</div>
 			</hero>
+
+			<preview-products class="preview-products">
+				<div class="preview-products__container">
+					<h2 class="preview-products__title">Some of our products</h2>
+
+					<div class="products__container wrapper">
+						<product-card class="products__card">
+							<img
+								class="products__card-img"
+								src="assets/products/product1.png"
+								alt=""
+							/>
+							<div class="products__card-description">
+								<p>Name</p>
+								<p>Product type</p>
+								<p>Price:</p>
+							</div>
+						</product-card>
+					</div>
+				</div>
+			</preview-products>
 		</main>
 	</body>
 </html>

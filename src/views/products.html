@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>Products</title>
+		<meta name="description" content="" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+	<body>
+		<nav class="nav">
+			<div class="nav__container wrapper">
+				<a class="nav__logo-link" href="/">
+					<img
+						class="nav__logo-img"
+						alt="Pet zen logo"
+						src="assets/furniro-logo.png"
+					/>
+				</a>
+
+				<ul class="nav__menu">
+					<li><a href="/">Home</a></li>
+					<li><a href="#about">About</a></li>
+					<li><a href="/products">Products</a></li>
+				</ul>
+
+				<div class="nav__spacer"></div>
+			</div>
+		</nav>
+		<main class="main-section">
+			<preview-products class="preview-products">
+				<div class="preview-products__container wrapper" id="table-body"></div>
+
+				<div class="container">
+					<div id="pagination-wrapper"></div>
+				</div>
+			</preview-products>
+		</main>
+	</body>
+</html>

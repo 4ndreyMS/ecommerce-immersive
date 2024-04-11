@@ -1,23 +1,4 @@
-import "./styles/index.scss";
-
-console.log("hello");
-
 var tableData = [
-	{
-		first_name: "Russell",
-		last_name: "Wilson",
-		rank: "1",
-	},
-	{
-		first_name: "Russell",
-		last_name: "Wilson",
-		rank: "1",
-	},
-	{
-		first_name: "Russell",
-		last_name: "Wilson",
-		rank: "1",
-	},
 	{
 		first_name: "Russell",
 		last_name: "Wilson",
@@ -467,9 +448,10 @@ var tableData = [
 
 var state = {
 	querySet: tableData,
-	page: 1, //starts in
-	rows: 8, //rows per page
-	window: 5, //amount of pages
+
+	page: 1,
+	rows: 5,
+	window: 5,
 };
 
 buildTable();
@@ -534,20 +516,19 @@ function pageButtons(pages) {
 	});
 }
 
-
-//insert the items
 function buildTable() {
-	var table = $("#table-body");
+	var table = document.getElementById("#table-body");
 	console.log(table);
 	var data = pagination(state.querySet, state.page, state.rows);
 	var myList = data.querySet;
 
 	for (var i in myList) {
-		const row = `
-            <div>
-                <p>${myList[i].first_name}</p>
-            </div>
-        `;
+		//Keep in mind we are using "Template Litterals to create rows"
+		var row = `<tr>
+                  <td>${myList[i].rank}</td>
+                  <td>${myList[i].first_name}</td>
+                  <td>${myList[i].last_name}</td>
+                  `;
 		table.append(row);
 	}
 

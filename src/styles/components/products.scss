@@ -1,0 +1,14 @@
+.products {
+	&__container {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+	}
+
+	&__card-img {
+		object-fit: cover;
+		width: 100%;
+	}
+	&__card-description {
+		background-color: $color-gray;
+	}
+}
