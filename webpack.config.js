@@ -18,6 +18,10 @@ module.exports = {
 			template: "src/views/products.html",
 			filename: "products",
 		}),
+		new HtmlWebpackPlugin({
+			template: "src/views/product-details.html",
+			filename: "product-details",
+		}),
 		new MiniCssExtractPlugin(),
 		new webpack.ProvidePlugin({
 			$: "jquery",
@@ -35,6 +39,10 @@ module.exports = {
 				{
 					from: "/products",
 					to: "src/products.html",
+				},
+				{
+					from: "/product-details",
+					to: "product-details.html",
 				},
 			],
 		},
