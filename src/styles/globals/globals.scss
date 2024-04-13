@@ -26,7 +26,36 @@ a {
 	color: black;
 }
 
-.button {
+.button-unfilled {
+	background-color: #fff;
+	border-color: $color-gold;
+	border-radius: 0;
+	color: $color-gold;
+	padding: rem(6) rem(12);
+	border: 0.1rem solid $color-gold;
+
+	&:active,
+	&:hover {
+		filter: brightness(90%);
+		background-color: $color-gold;
+		border-color: $color-gold;
+		color: #fff;
+		transition: 0.4s;
+	}
+
+	@include tablet() {
+		& {
+			border: 0.2rem solid $color-gold;
+		}
+	}
+	@include desktop() {
+		& {
+			border: 0.2rem solid $color-gold;
+		}
+	}
+}
+
+.button-filled {
 	background-color: $color-gold;
 	border-color: $color-gold;
 	border-radius: 0;
