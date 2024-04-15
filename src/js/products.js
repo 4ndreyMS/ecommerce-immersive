@@ -5,13 +5,18 @@ export function loadPreviewProducts() {
 
 	previewProducts.forEach((element) => {
 		const card = `
+
+		
         
-            <product-card class="products__card">
-                <img
-                    class="products__card-img"
-                    src="${element.image}"
-                    alt="${element.name}"
-                />
+		<product-card class="products__card">
+			<a href="/product-details?id=${element.id}">
+				<div>
+					<img
+						class="products__card-img"
+						src="${element.image}"
+						alt="${element.name}"
+					/>
+				</div>
                 <div class="products__card-description">
                     <p class="semi-bold">${element.name}</p>
                     <p class="semi-bold text-0 products__card-description-type">
@@ -19,7 +24,8 @@ export function loadPreviewProducts() {
                     </p>
                     <p class="semi-bold">$${element.price} </p>
                 </div>
-            </product-card>
+			</a>
+		</product-card>
         
         `;
 
@@ -103,3 +109,5 @@ const previewProducts = [
 		image: "assets/products/product8.png",
 	},
 ];
+
+export function activePaginator(element) {}

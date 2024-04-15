@@ -1,0 +1,32 @@
+.product-detail {
+	&__container {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 2rem;
+
+		@include tablet() {
+			& {
+				// flex-direction: row;
+				grid-template-columns: 1fr;
+			}
+		}
+		@include desktop() {
+			& {
+				grid-template-columns: 1fr 1fr;
+
+				// flex-direction: row;
+			}
+		}
+	}
+	&__image {
+		// max-width: 30rem;
+		width: 100%;
+	}
+	&__reviews-cont {
+		display: flex;
+
+		& p {
+			margin: 0;
+		}
+	}
+}

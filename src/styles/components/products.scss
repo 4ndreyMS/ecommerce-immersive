@@ -45,4 +45,15 @@
 	&__card-description-type {
 		color: $color-gray-dark;
 	}
+
+	&__pagination-container {
+		display: flex;
+		justify-content: center;
+		gap: rem(16);
+
+		& button {
+			border-radius: 10px;
+		}
+	}
+	
 }

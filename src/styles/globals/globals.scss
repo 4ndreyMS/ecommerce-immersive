@@ -31,7 +31,7 @@ a {
 	border-color: $color-gold;
 	border-radius: 0;
 	color: $color-gold;
-	padding: rem(6) rem(12);
+	padding: rem(10) rem(15);
 	border: 0.1rem solid $color-gold;
 
 	&:active,
@@ -60,12 +60,29 @@ a {
 	border-color: $color-gold;
 	border-radius: 0;
 	color: #fff;
-	padding: rem(6) rem(12);
+	padding: rem(10) rem(15);
 	border: none;
 
 	&:active,
 	&:hover {
 		filter: brightness(90%);
+		background-color: $color-gold;
+		border-color: $color-gold;
+		color: #fff;
+		transition: 0.4s;
+	}
+}
+
+.button-filled-beige {
+	background-color: $color-beige;
+	border-color: $color-beige;
+	border-radius: 0;
+	color: #000;
+	padding: rem(10) rem(15);
+	border: none;
+
+	&:active,
+	&:hover {
 		background-color: $color-gold;
 		border-color: $color-gold;
 		color: #fff;
@@ -79,4 +96,8 @@ a {
 
 .text-0 {
 	font-size: 0.8rem;
+}
+
+.checked {
+	color: orange;
 }

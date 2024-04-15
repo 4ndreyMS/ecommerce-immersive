@@ -31,32 +31,23 @@
 				<div class="nav__spacer"></div>
 			</div>
 		</nav>
+
 		<main class="main-section">
-			<preview-products class="preview-products">
-				<div id="table-body" class="products__container wrapper">
-					<product-card class="products__card">
-						<a href="/product-details?id=1">
-							<img
-								class="products__card-img"
-								src="assets/products/product1.png"
-								alt=""
-							/>
-							<div class="products__card-description">
-								<p class="semi-bold">Syltherine</p>
-								<p class="semi-bold text-0 products__card-description-type">
-									Stylish cafe chair
-								</p>
-								<p class="semi-bold">USD 200</p>
-							</div>
-						</a>
-					</product-card>
+			<banner class="banner-products">
+				<div class="banner-products__cont">
+					<h2>All products</h2>
+					<p>Home > All products</p>
 				</div>
+			</banner>
+			<preview-products class="preview-products">
+				<div id="table-body" class="products__container wrapper"></div>
 
 				<!-- <div class="preview-products__container wrapper" id="table-body"></div> -->
 
-				<div class="container">
-					<div id="pagination-wrapper"></div>
-				</div>
+				<div
+					class="products__pagination-container"
+					id="pagination-wrapper"
+				></div>
 			</preview-products>
 		</main>
 		<footer class="footer">
