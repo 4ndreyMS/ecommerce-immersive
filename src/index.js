@@ -270,8 +270,6 @@ export let tableData = producstList;
 */
 window.filterByCategory = filterByCategory;
 export function filterByCategory(currentElement, filter) {
-	console.log(currentElement);
-
 	$(".active-btn").removeClass("active-btn");
 
 	$(currentElement).addClass("active-btn");
