@@ -1,23 +1,26 @@
 .footer {
-	margin-top: 2rem;
-	background-color: $color-gold;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	color: #fff;
-	text-align: center;
+	margin-top: 1rem;
+	&__cont {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		color: #8f704c;
+		text-align: center;
+		border-top: 1px solid #e6e6e6;
+		padding-top: 2rem;
 
-	@include tablet() {
-		& {
-			flex-direction: row;
-			text-align: start;
+		@include tablet() {
+			& {
+				flex-direction: row;
+				text-align: start;
+			}
 		}
-	}
-	@include desktop() {
-		& {
-			flex-direction: row;
-			text-align: start;
+		@include desktop() {
+			& {
+				flex-direction: row;
+				text-align: start;
+			}
 		}
 	}
 
@@ -56,7 +59,7 @@
 		width: 50%;
 	}
 	&__cont-right {
-		color: #fff;
+		color: #8f704c;
 		width: 50%;
 	}
 }
