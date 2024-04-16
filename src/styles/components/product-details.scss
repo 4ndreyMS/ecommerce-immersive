@@ -19,10 +19,15 @@
 		}
 	}
 	&__image {
-		max-width: rem(585);
-		max-height: rem(618);
 		width: 100%;
 		object-fit: cover;
+
+		@include desktop() {
+			& {
+				max-width: rem(585);
+				max-height: rem(618);
+			}
+		}
 	}
 	&__reviews-cont {
 		display: flex;

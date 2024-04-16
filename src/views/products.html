@@ -41,8 +41,47 @@
 				</div>
 			</banner>
 			<preview-products class="preview-products">
-				<div>
-					<button onclick="filterByCategory()">Filter by category</button>
+				<div class="wrapper preview-products__filter-by-cont">
+					<div>
+						<p>Filter by:</p>
+					</div>
+					<div class="preview-products__filters-cont">
+						<button
+							type="button"
+							class="button-unfilled"
+							onclick="filterByCategory('All')"
+						>
+							All
+						</button>
+						<button
+							class="button-unfilled"
+							type="button"
+							onclick="filterByCategory('Bedroom')"
+						>
+							Bedroom
+						</button>
+						<button
+							type="button"
+							class="button-unfilled"
+							onclick="filterByCategory('Living Room')"
+						>
+							Living Room
+						</button>
+						<button
+							type="button"
+							class="button-unfilled"
+							onclick="filterByCategory('Kitchen')"
+						>
+							Kitchen
+						</button>
+						<button
+							type="button"
+							class="button-unfilled"
+							onclick="filterByCategory('Outdoor')"
+						>
+							Outdoor
+						</button>
+					</div>
 				</div>
 				<div id="table-body" class="products__container wrapper"></div>
 				<div

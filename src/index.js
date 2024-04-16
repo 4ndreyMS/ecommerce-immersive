@@ -9,7 +9,7 @@ window.onload = function () {
 	getQueryParameter();
 };
 
-export let tableData = [
+export const producstList = [
 	{
 		id: "1",
 		name: "Syltherine",
@@ -262,21 +262,24 @@ export let tableData = [
 	},
 ];
 
+export let tableData = producstList;
+
 /*
 	1 - Loop Through Array & Access each value
 	2 - Create Table Rows & append to table
 */
 window.filterByCategory = filterByCategory;
-export function filterByCategory() {
-	console.log(tableData);
-	const categoryToFilter = "Bedroom";
-	const newArray = tableData.filter(
-		(item) => item.category === categoryToFilter
-	);
-	tableData = newArray;
-	console.log(tableData);
+export function filterByCategory(filter) {
+	if (filter !== "All") {
+		const newArray = producstList.filter((item) => item.category === filter);
+		tableData = newArray;
+	} else {
+		tableData = producstList;
+	}
+
 	state.querySet = tableData;
 	$("#table-body").empty();
+	$("#pagination-wrapper").empty();
 	buildTable();
 }
 
@@ -308,37 +311,40 @@ function pageButtons(pages) {
 
 	if (wrapper) {
 		wrapper.innerHTML = ``;
-		console.log("Pages:", pages);
 
-		var maxLeft = state.page - Math.floor(state.window / 2);
-		var maxRight = state.page + Math.floor(state.window / 2);
-
-		if (maxLeft < 1) {
-			maxLeft = 1;
-			maxRight = state.window;
-		}
-
-		if (maxRight > pages) {
-			maxLeft = pages - (state.window - 1);
+		if (pages > 0) {
+			var maxLeft = state.page - Math.floor(state.window / 2);
+			var maxRight = state.page + Math.floor(state.window / 2);
 
 			if (maxLeft < 1) {
 				maxLeft = 1;
+				maxRight = state.window;
 			}
-			maxRight = pages;
-		}
 
-		for (var page = maxLeft; page <= maxRight; page++) {
-			wrapper.innerHTML += `<button value=${page} onClick="activePaginator(this)" class="page button-filled-beige">${page}</button>`;
-		}
+			if (maxRight > pages) {
+				maxLeft = pages - (state.window - 1);
 
-		if (state.page != 1) {
-			wrapper.innerHTML =
-				`<button value=${1} onClick="activePaginator(this)" class="page button-filled-beige">&#171; First</button>` +
-				wrapper.innerHTML;
-		}
+				if (maxLeft < 1) {
+					maxLeft = 1;
+				}
+				maxRight = pages;
+			}
 
-		if (state.page != pages) {
-			wrapper.innerHTML += `<button value=${pages} onClick="activePaginator(this)" class="page button-filled-beige">Last &#187;</button>`;
+			for (var page = maxLeft; page <= maxRight; page++) {
+				wrapper.innerHTML += `<button value=${page} onClick="activePaginator(this)" class="page button-filled-beige">${page}</button>`;
+			}
+
+			if (state.page != 1) {
+				wrapper.innerHTML =
+					`<button value=${1} onClick="activePaginator(this)" class="page button-filled-beige">&#171; First</button>` +
+					wrapper.innerHTML;
+			}
+
+			if (state.page != pages) {
+				wrapper.innerHTML += `<button value=${pages} onClick="activePaginator(this)" class="page button-filled-beige">Last &#187;</button>`;
+			}
+		} else {
+			wrapper.innerHTML += `<button value=${1} onClick="activePaginator(this)" class="page button-filled-beige">${1}</button>`;
 		}
 
 		$(".page").on("click", function () {
@@ -354,7 +360,6 @@ function pageButtons(pages) {
 //insert the items
 function buildTable() {
 	var table = $("#table-body");
-	console.log(table);
 	var data = pagination(state.querySet, state.page, state.rows);
 	var myList = data.querySet;
 

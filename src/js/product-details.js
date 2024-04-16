@@ -1,16 +1,12 @@
-console.log("enter");
 import { tableData } from "../index.js";
 
 export function getQueryParameter() {
 	var urlParams = new URLSearchParams(window.location.search);
 	var id = urlParams.get("id");
-	console.log(id);
 
 	if (id !== null && id !== "") {
 		const div = $("#product-detail");
-		// div.remove();
 		const filteredElement = filterArrayById(id);
-		console.log(filteredElement);
 		div.append(`
 				<banner class="banner-details">
 					<div class="banner-details__cont wrapper">

@@ -474,7 +474,6 @@ function pageButtons(pages) {
 	var wrapper = document.getElementById("pagination-wrapper");
 
 	wrapper.innerHTML = ``;
-	console.log("Pages:", pages);
 
 	var maxLeft = state.page - Math.floor(state.window / 2);
 	var maxRight = state.page + Math.floor(state.window / 2);
@@ -518,7 +517,6 @@ function pageButtons(pages) {
 
 function buildTable() {
 	var table = document.getElementById("#table-body");
-	console.log(table);
 	var data = pagination(state.querySet, state.page, state.rows);
 	var myList = data.querySet;
 
