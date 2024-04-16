@@ -270,15 +270,16 @@ export let tableData = producstList;
 */
 window.filterByCategory = filterByCategory;
 export function filterByCategory(currentElement, filter) {
-	$(".active-btn").removeClass("active-btn");
-
-	$(currentElement).addClass("active-btn");
-
 	if (filter !== "All") {
 		const newArray = producstList.filter((item) => item.category === filter);
 		tableData = newArray;
+		$(".active-btn").removeClass("active-btn");
+		$(currentElement).addClass("active-btn");
 	} else {
 		tableData = producstList;
+		$(".active-btn").removeClass("active-btn");
+
+		$(currentElement).addClass("active-btn");
 	}
 
 	state.querySet = tableData;
