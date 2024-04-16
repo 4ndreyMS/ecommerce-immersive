@@ -21,6 +21,12 @@
 	}
 }
 
+.active-btn {
+	background-color: $color-brown !important;
+	border-color: $color-brown;
+	color: #fff !important;
+}
+
 a {
 	text-decoration: none;
 	color: black;

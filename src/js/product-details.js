@@ -5,7 +5,7 @@ export function getQueryParameter() {
 	const id = urlParams.get("id");
 
 	if (window.location.href.includes("product-details")) {
-		if (id !== null && id !== "") {
+		if (id !== null && id !== "" && filterArrayById(id).length > 0) {
 			const div = $("#product-detail");
 			const filteredElement = filterArrayById(id);
 			div.append(`
@@ -46,7 +46,7 @@ export function getQueryParameter() {
 			$("main").addClass("main-no-wrapper");
 			$("main").addClass("main-no-cont");
 
-			div.append(`<h1>Invalid product selected</h1> ${id}`);
+			div.append(`<h1>Product not found</h1>`);
 		}
 	}
 }

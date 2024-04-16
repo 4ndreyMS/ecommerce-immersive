@@ -269,7 +269,13 @@ export let tableData = producstList;
 	2 - Create Table Rows & append to table
 */
 window.filterByCategory = filterByCategory;
-export function filterByCategory(filter) {
+export function filterByCategory(currentElement, filter) {
+	console.log(currentElement);
+
+	$(".active-btn").removeClass("active-btn");
+
+	$(currentElement).addClass("active-btn");
+
 	if (filter !== "All") {
 		const newArray = producstList.filter((item) => item.category === filter);
 		tableData = newArray;
