@@ -1,13 +1,9 @@
 export function loadPreviewProducts() {
 	const previewProduct = $("#preview-products");
 
-	console.log("called");
-
 	previewProducts.forEach((element) => {
 		const card = `
-
-		
-        
+ 
 		<product-card class="products__card">
 			<a href="/product-details?id=${element.id}">
 				<div>

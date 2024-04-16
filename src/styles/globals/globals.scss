@@ -28,36 +28,36 @@ a {
 
 .button-unfilled {
 	background-color: #fff;
-	border-color: $color-gold;
+	border-color: $color-brown;
 	border-radius: 0;
-	color: $color-gold;
+	color: $color-brown;
 	padding: rem(10) rem(15);
-	border: 0.1rem solid $color-gold;
+	border: 0.1rem solid $color-brown;
 
 	&:active,
 	&:hover {
 		filter: brightness(90%);
-		background-color: $color-gold;
-		border-color: $color-gold;
+		background-color: $color-brown;
+		border-color: $color-brown;
 		color: #fff;
 		transition: 0.4s;
 	}
 
 	@include tablet() {
 		& {
-			border: 0.2rem solid $color-gold;
+			border: 0.2rem solid $color-brown;
 		}
 	}
 	@include desktop() {
 		& {
-			border: 0.2rem solid $color-gold;
+			border: 0.2rem solid $color-brown;
 		}
 	}
 }
 
 .button-filled {
-	background-color: $color-gold;
-	border-color: $color-gold;
+	background-color: $color-brown;
+	border-color: $color-brown;
 	border-radius: 0;
 	color: #fff;
 	padding: rem(10) rem(15);
@@ -66,8 +66,8 @@ a {
 	&:active,
 	&:hover {
 		filter: brightness(90%);
-		background-color: $color-gold;
-		border-color: $color-gold;
+		background-color: $color-brown;
+		border-color: $color-brown;
 		color: #fff;
 		transition: 0.4s;
 	}
@@ -83,8 +83,8 @@ a {
 
 	&:active,
 	&:hover {
-		background-color: $color-gold;
-		border-color: $color-gold;
+		background-color: $color-brown;
+		border-color: $color-brown;
 		color: #fff;
 		transition: 0.4s;
 	}

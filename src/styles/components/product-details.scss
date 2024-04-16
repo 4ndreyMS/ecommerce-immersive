@@ -19,8 +19,10 @@
 		}
 	}
 	&__image {
-		// max-width: 30rem;
+		max-width: rem(585);
+		max-height: rem(618);
 		width: 100%;
+		object-fit: cover;
 	}
 	&__reviews-cont {
 		display: flex;

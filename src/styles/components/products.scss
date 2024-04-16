@@ -42,9 +42,9 @@
 			margin: 0;
 		}
 	}
-	&__card-description-type {
-		color: $color-gray-dark;
-	}
+	// &__card-description-type {
+	// 	color: $color-gray-dark;
+	// }
 
 	&__pagination-container {
 		display: flex;
@@ -55,5 +55,4 @@
 			border-radius: 10px;
 		}
 	}
-	
 }

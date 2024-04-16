@@ -35,27 +35,25 @@
 	}
 
 	&__banner-header {
-		color: $color-gold;
+		color: $color-brown;
 	}
 
 	&__banner-button {
-		background-color: $color-gold;
-		border-color: $color-gold;
+		background-color: $color-brown;
+		border-color: $color-brown;
 		border-radius: 0;
 		color: #fff;
 
 		&:active,
 		&:hover {
 			filter: brightness(90%);
-			background-color: $color-gold;
-			border-color: $color-gold;
+			background-color: $color-brown;
+			border-color: $color-brown;
 
 			color: #fff;
 		}
 	}
 }
-
-
 
 .controls-item {
 	display: inline-block;
