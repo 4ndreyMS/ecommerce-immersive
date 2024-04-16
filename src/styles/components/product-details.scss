@@ -37,3 +37,15 @@
 		}
 	}
 }
+
+.no-cont {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+.main-no-cont {
+	margin: auto;
+	margin-top: 9rem !important;
+	text-align: center;
+}

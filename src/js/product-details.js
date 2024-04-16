@@ -1,13 +1,14 @@
 import { tableData } from "../index.js";
 
 export function getQueryParameter() {
-	var urlParams = new URLSearchParams(window.location.search);
-	var id = urlParams.get("id");
+	const urlParams = new URLSearchParams(window.location.search);
+	const id = urlParams.get("id");
 
-	if (id !== null && id !== "") {
-		const div = $("#product-detail");
-		const filteredElement = filterArrayById(id);
-		div.append(`
+	if (window.location.href.includes("product-details")) {
+		if (id !== null && id !== "") {
+			const div = $("#product-detail");
+			const filteredElement = filterArrayById(id);
+			div.append(`
 				<banner class="banner-details">
 					<div class="banner-details__cont wrapper">
 						<p class="banner-details__title">Home > Products > <span class="semi-bold">${filteredElement[0].name}<span/></p>
@@ -39,10 +40,14 @@ export function getQueryParameter() {
 				</div>
 		
 		`);
-	} else {
-		const div = $("#product-detail");
+		} else {
+			const div = $("#product-detail");
+			$("body").addClass("no-cont");
+			$("main").addClass("main-no-wrapper");
+			$("main").addClass("main-no-cont");
 
-		div.append(`<h1>Invalid product selected</h1> ${id}`);
+			div.append(`<h1>Invalid product selected</h1> ${id}`);
+		}
 	}
 }
 
